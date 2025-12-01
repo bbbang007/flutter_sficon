@@ -36,7 +36,7 @@ class SFIcon extends StatelessWidget {
     final iconOpacity = iconTheme.opacity ?? 1.0;
     var iconColor = color ?? iconTheme.color!;
     if (iconOpacity != 1.0) {
-      iconColor = iconColor.withValues(alpha: iconColor.a * iconOpacity);
+      iconColor = iconColor.withOpacity(iconColor.opacity * iconOpacity);
     }
 
     return Text(
